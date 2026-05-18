@@ -160,6 +160,31 @@
       font-size:14px;
       line-height:1.45;
     }
+    .shots{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:10px;
+    }
+    .shot{
+      border:1px solid var(--line);
+      border-radius:10px;
+      overflow:hidden;
+      background:#121824;
+    }
+    .shot img{
+      display:block;
+      width:100%;
+      height:150px;
+      object-fit:cover;
+      background:#0c111a;
+    }
+    .shot p{
+      margin:0;
+      padding:8px 9px;
+      font-size:12px;
+      color:#c8d4eb;
+      line-height:1.35;
+    }
   </style>
 </head>
 <body>
@@ -355,6 +380,8 @@
               <th>Емкость</th>
               <th>Макс. мощность</th>
               <th>Порты (ключевые)</th>
+              <th>Цена (ориентир)</th>
+              <th>Доставка в РФ</th>
               <th>Вес</th>
               <th>Габариты</th>
               <th>Rugged/защита</th>
@@ -363,39 +390,69 @@
           </thead>
           <tbody>
             <tr>
-              <td>BLUETTI AC60P</td><td>РФ</td><td>Power station</td><td>504 Wh</td><td>600W (пик 1200W)</td><td>USB-C 100W, 2x USB-A, 12V DC</td><td>~9.1 кг</td><td>290×205×234 мм</td><td>IP65 (заявлено)</td><td><span class="rating">3.5 / 5</span></td>
+              <td>BLUETTI AC60P</td><td>РФ</td><td>Power station</td><td>504 Wh</td><td>600W (пик 1200W)</td><td>USB-C 100W, 2x USB-A, 12V DC</td><td>н/д на витрине</td><td>Да (локальные продавцы РФ)</td><td>~9.1 кг</td><td>290×205×234 мм</td><td>IP65 (заявлено)</td><td><span class="rating">3.5 / 5</span></td>
             </tr>
             <tr>
-              <td>EcoFlow DELTA 2</td><td>РФ</td><td>Power station</td><td>1024 Wh</td><td>1800W (X-Boost 2200W)</td><td>6x AC, USB-A, USB-C</td><td>~14 кг</td><td><small>крупный формат</small></td><td>Упор на надежность</td><td><span class="rating">2.5 / 5</span></td>
+              <td>EcoFlow DELTA 2</td><td>РФ</td><td>Power station</td><td>1024 Wh</td><td>1800W (X-Boost 2200W)</td><td>6x AC, USB-A, USB-C</td><td>н/д на витрине</td><td>Да (локальные продавцы РФ)</td><td>~14 кг</td><td><small>крупный формат</small></td><td>Упор на надежность</td><td><span class="rating">2.5 / 5</span></td>
             </tr>
             <tr>
-              <td>BERKUT JSL-20000</td><td>РФ</td><td>Jump-starter/brick</td><td>66.6 Wh</td><td>пуск 400A (пик 800A)</td><td>Type-C PD, USB QC, 12V</td><td>~0.62 кг</td><td>225×89×30 мм</td><td>-30..+60°C (заявлено)</td><td><span class="rating">4.2 / 5</span></td>
+              <td>BERKUT JSL-20000</td><td>РФ</td><td>Jump-starter/brick</td><td>66.6 Wh</td><td>пуск 400A (пик 800A)</td><td>Type-C PD, USB QC, 12V</td><td>≈ 14 449 ₽*</td><td>Да (локальные продавцы РФ)</td><td>~0.62 кг</td><td>225×89×30 мм</td><td>-30..+60°C (заявлено)</td><td><span class="rating">4.2 / 5</span></td>
             </tr>
             <tr>
-              <td>FUBAG DRIVE 600</td><td>РФ</td><td>Jump-starter/compact</td><td>18000 mAh</td><td>пуск 300A (пик 600A)</td><td>USB 5V, DC 12V</td><td>~0.6 кг</td><td>225×85×30 мм</td><td>Инструментальный сегмент</td><td><span class="rating">4.0 / 5</span></td>
+              <td>FUBAG DRIVE 600</td><td>РФ</td><td>Jump-starter/compact</td><td>18000 mAh</td><td>пуск 300A (пик 600A)</td><td>USB 5V, DC 12V</td><td>≈ 12 090 ₽*</td><td>Да (локальные продавцы РФ)</td><td>~0.6 кг</td><td>225×85×30 мм</td><td>Инструментальный сегмент</td><td><span class="rating">4.0 / 5</span></td>
             </tr>
             <tr>
-              <td>Jackery Explorer 500</td><td>РФ</td><td>Power station</td><td>518 Wh</td><td>500W</td><td>AC, USB-A, 12V car</td><td>~6.04 кг</td><td>301×193×242 мм</td><td>Outdoor-позиционирование</td><td><span class="rating">3.0 / 5</span></td>
+              <td>Jackery Explorer 500</td><td>РФ</td><td>Power station</td><td>518 Wh</td><td>500W</td><td>AC, USB-A, 12V car</td><td>н/д в открытом фрагменте</td><td>Да (локальные продавцы РФ)</td><td>~6.04 кг</td><td>301×193×242 мм</td><td>Outdoor-позиционирование</td><td><span class="rating">3.0 / 5</span></td>
             </tr>
             <tr>
-              <td>Goal Zero Yeti 500</td><td>Global</td><td>Power station</td><td>499.2 Wh</td><td>500W (пик 1000W)</td><td>USB-A, USB-C PD, 12V, AC</td><td>~7.3 кг</td><td>288×196×198 мм</td><td>IPX4, cold-use</td><td><span class="rating">3.4 / 5</span></td>
+              <td>Goal Zero Yeti 500</td><td>Global</td><td>Power station</td><td>499.2 Wh</td><td>500W (пик 1000W)</td><td>USB-A, USB-C PD, 12V, AC</td><td>н/д в открытом фрагменте</td><td>Неочевидно, обычно через посредника</td><td>~7.3 кг</td><td>288×196×198 мм</td><td>IPX4, cold-use</td><td><span class="rating">3.4 / 5</span></td>
             </tr>
             <tr>
-              <td>BioLite BaseCharge 600</td><td>Global</td><td>Power station</td><td>622 Wh</td><td>600W (пик 1000W)</td><td>AC, USB-A, USB-C, 12V, DC</td><td>~5.9 кг</td><td>309×200×201 мм</td><td>12-point safety</td><td><span class="rating">3.3 / 5</span></td>
+              <td>BioLite BaseCharge 600</td><td>Global</td><td>Power station</td><td>622 Wh</td><td>600W (пик 1000W)</td><td>AC, USB-A, USB-C, 12V, DC</td><td>$0.00 (витрина, вероятно неактуально)</td><td>Неочевидно, обычно через посредника</td><td>~5.9 кг</td><td>309×200×201 мм</td><td>12-point safety</td><td><span class="rating">3.3 / 5</span></td>
             </tr>
             <tr>
-              <td>BLUETTI AC70P</td><td>Global</td><td>Power station</td><td>864 Wh</td><td>1000W</td><td>2x USB-C 100W, 2x USB-A, AC</td><td>~10.7 кг</td><td>314×209.5×255.8 мм</td><td>UPS 20ms</td><td><span class="rating">3.0 / 5</span></td>
+              <td>BLUETTI AC70P</td><td>Global</td><td>Power station</td><td>864 Wh</td><td>1000W</td><td>2x USB-C 100W, 2x USB-A, AC</td><td>750 € (EU витрина)</td><td>Прямой EU→РФ обычно недоступен</td><td>~10.7 кг</td><td>314×209.5×255.8 мм</td><td>UPS 20ms</td><td><span class="rating">3.0 / 5</span></td>
             </tr>
             <tr>
-              <td>EcoFlow DELTA 3 Plus</td><td>Global</td><td>Power station</td><td>1024 Wh</td><td>1800W (пик 3600W)</td><td>13 выходов, 2x USB-C 140W</td><td>~12.5 кг</td><td>398×202×283.6 мм</td><td>IP65 battery pack</td><td><span class="rating">2.2 / 5</span></td>
+              <td>EcoFlow DELTA 3 Plus</td><td>Global</td><td>Power station</td><td>1024 Wh</td><td>1800W (пик 3600W)</td><td>13 выходов, 2x USB-C 140W</td><td>$699 (BestBuy, ориентир)</td><td>Нет прямой доставки в РФ с US-ритейла</td><td>~12.5 кг</td><td>398×202×283.6 мм</td><td>IP65 battery pack</td><td><span class="rating">2.2 / 5</span></td>
             </tr>
             <tr>
-              <td>BioLite Charge 100 Max</td><td>Global</td><td>Power bank</td><td>91.3 Wh / 25,000 mAh</td><td>120W total</td><td>2x USB-C PD 100W, USB-A, wireless</td><td>~0.58 кг</td><td>140×112×35 мм</td><td>FAA carry-on class</td><td><span class="rating">4.6 / 5</span></td>
+              <td>BioLite Charge 100 Max</td><td>Global</td><td>Power bank</td><td>91.3 Wh / 25,000 mAh</td><td>120W total</td><td>2x USB-C PD 100W, USB-A, wireless</td><td>$134.89 (официальный сайт)</td><td>Неочевидно, чаще через форвардера</td><td>~0.58 кг</td><td>140×112×35 мм</td><td>FAA carry-on class</td><td><span class="rating">4.6 / 5</span></td>
             </tr>
           </tbody>
         </table>
       </div>
-      <p class="src">Оценка "Похожесть на ваш прототип" — экспертная эвристика по форм-фактору, компактности, портовой архитектуре и "полевому" стилю.</p>
+      <p class="src">Оценка "Похожесть на ваш прототип" — экспертная эвристика по форм-фактору, компактности, портовой архитектуре и "полевому" стилю. <br>* Цены ориентировочные, могут меняться по акциям и региону, фиксированы по открытым источникам на 18.05.2026.</p>
+    </div>
+
+    <div class="section">
+      <h2>Ракурсы и примеры использования (визуальное сравнение)</h2>
+      <div class="shots">
+        <figure class="shot">
+          <img src="https://global.bioliteenergy.com/cdn/shop/files/BaseCharge_Lifestyle_Carouselcopy2.png?v=1689761716&width=640" alt="BioLite BaseCharge 600 в использовании">
+          <p>BioLite BaseCharge 600: lifestyle-кадр, сценарий выезда/лагеря.</p>
+        </figure>
+        <figure class="shot">
+          <img src="https://www.bioliteenergy.com/cdn/shop/files/Charge100Max_3_2051ec10-0765-4072-89f9-f93c7b9a0041.png?v=1722958165&width=640" alt="BioLite Charge 100 Max ракурс">
+          <p>BioLite Charge 100 Max: компактный “brick” профиль, близкий к целевому форм-фактору.</p>
+        </figure>
+        <figure class="shot">
+          <img src="https://www.bluettipower.eu/cdn/shop/files/AC70P-ZT1.png?v=1706857422&width=1000" alt="BLUETTI AC70P ракурс">
+          <p>BLUETTI AC70P: корпус и панель портов в “инструментальном” стиле.</p>
+        </figure>
+        <figure class="shot">
+          <img src="https://us.ecoflow.com/cdn/shop/files/ecoflow-us-ecoflow-delta-3-plus-portable-power-station-standalone-delta-3-plus-1179495741.png?v=1755573843&width=1240" alt="EcoFlow DELTA 3 Plus">
+          <p>EcoFlow DELTA 3 Plus: пример high-power станции с многопортовой фронтальной панелью.</p>
+        </figure>
+        <figure class="shot">
+          <img src="https://goalzero.com/cdn/shop/files/Yeti500_ProductHero_300x.jpg?v=1712607319" alt="Goal Zero Yeti 500">
+          <p>Goal Zero Yeti 500: rugged-ориентированный корпус с упором на полевое использование.</p>
+        </figure>
+        <figure class="shot">
+          <img src="https://cdn.sportmaster.ru/upload/mdm/media_content/resize/c92/768_1024_2739/136670230299.jpg" alt="Jackery Explorer 500">
+          <p>Jackery Explorer 500: популярный outdoor-форм-фактор с ручкой для мобильных сценариев.</p>
+        </figure>
+      </div>
     </div>
 
     <div class="section">
