@@ -3,26 +3,36 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sketchboard — 6 ракурсов и сценариев</title>
+  <title>Инженерный лист — FIELD/CITY (виды, разрез, электрическая схема)</title>
   <style>
-    :root{--bg:#f5f2ea;--ink:#1f1f1f;--muted:#555;--line:#999}
+    :root{--bg:#f4f1e8;--ink:#1f2329;--muted:#58606e;--line:#3d434d;--aux:#7a838f;--accent:#0b5cad;--ok:#157347}
     *{box-sizing:border-box} html,body{height:100%;margin:0}
     body{font-family:"Segoe UI",system-ui,sans-serif;background:var(--bg);color:var(--ink)}
     .wrap{height:100%;display:grid;grid-template-rows:auto 1fr;padding:10px 14px;gap:10px}
     .top{display:flex;justify-content:space-between;align-items:center}
-    .title{font-weight:800;font-size:20px}
+    .title{font-weight:800;font-size:22px}
+    .sub{font-size:12px;color:var(--muted)}
     .nav a{margin-left:10px;color:#0b4a7a;text-decoration:none;font-size:13px}
     .grid{height:100%;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,1fr);gap:10px}
-    .card{background:#fff;border:2px solid #d8d2c5;border-radius:10px;padding:8px;display:grid;grid-template-rows:1fr auto}
-    svg{width:100%;height:100%;display:block}
-    .cap{font-size:12px;color:var(--muted)}
-    @media (max-width:1000px){.grid{grid-template-columns:1fr 1fr 1fr;grid-template-rows:repeat(2,220px)}}
+    .card{background:#fff;border:2px solid #d2cabc;border-radius:10px;padding:8px;display:grid;grid-template-rows:1fr auto}
+    .cap{font-size:12px;color:#4e5563}
+    svg{width:100%;height:100%}
+    .dim{stroke:#707987;stroke-width:1.2;marker-start:url(#arr);marker-end:url(#arr)}
+    .main{stroke:var(--line);stroke-width:2.8;fill:none}
+    .aux{stroke:var(--aux);stroke-width:1.4;fill:none;stroke-dasharray:5 4}
+    .txt{font-size:10px;fill:#2f3540}
+    .flow{stroke:var(--accent);stroke-width:2.2;fill:none;marker-end:url(#arrowBlue)}
+    .flow2{stroke:var(--ok);stroke-width:2.2;fill:none;marker-end:url(#arrowGreen)}
+    @media (max-width:1050px){.grid{grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,240px)}}
   </style>
 </head>
 <body>
   <div class="wrap">
     <div class="top">
-      <div class="title">Sketchboard: FIELD TITAN X + CITY PRO MAX (6 кадров)</div>
+      <div>
+        <div class="title">Инженерный лист: FIELD TITAN X + CITY PRO MAX</div>
+        <div class="sub">Виды: спереди / слева / сверху + разрез + объемы + электрический поток</div>
+      </div>
       <div class="nav">
         <a href="./line-field-titan-x.html">Field</a>
         <a href="./line-city-pro-max.html">City</a>
@@ -30,12 +40,113 @@
       </div>
     </div>
     <div class="grid">
-      <div class="card"><svg viewBox="0 0 300 180"><rect x="40" y="70" width="220" height="55" rx="8" fill="none" stroke="#333" stroke-width="3"/><rect x="58" y="87" width="24" height="10" fill="none" stroke="#333"/><rect x="90" y="87" width="24" height="10" fill="none" stroke="#333"/><rect x="210" y="84" width="34" height="18" fill="none" stroke="#333"/><line x1="30" y1="140" x2="270" y2="140" stroke="#888" stroke-dasharray="5 4"/></svg><div class="cap">1) FIELD — фронтальный ракурс, порты и экран</div></div>
-      <div class="card"><svg viewBox="0 0 300 180"><polygon points="70,120 220,120 250,95 105,95" fill="none" stroke="#333" stroke-width="3"/><line x1="105" y1="95" x2="105" y2="120" stroke="#333"/><line x1="220" y1="120" x2="220" y2="95" stroke="#333"/><circle cx="238" cy="103" r="4" fill="none" stroke="#333"/></svg><div class="cap">2) FIELD — боковой ракурс, защищенный угол</div></div>
-      <div class="card"><svg viewBox="0 0 300 180"><rect x="36" y="66" width="228" height="62" rx="8" fill="none" stroke="#333" stroke-width="3"/><polyline points="68,66 88,38 213,38 232,66" fill="none" stroke="#333" stroke-width="2"/><line x1="88" y1="38" x2="213" y2="38" stroke="#666" stroke-dasharray="4 4"/></svg><div class="cap">3) FIELD — верх, сервисный контур и “бронекапсула”</div></div>
-      <div class="card"><svg viewBox="0 0 300 180"><rect x="70" y="78" width="165" height="42" rx="9" fill="none" stroke="#333" stroke-width="3"/><rect x="83" y="92" width="20" height="8" fill="none" stroke="#333"/><rect x="110" y="92" width="20" height="8" fill="none" stroke="#333"/><rect x="190" y="89" width="30" height="13" fill="none" stroke="#333"/></svg><div class="cap">4) CITY — фронт, минималистичная портовая панель</div></div>
-      <div class="card"><svg viewBox="0 0 300 180"><rect x="45" y="70" width="130" height="70" rx="8" fill="none" stroke="#333" stroke-width="3"/><rect x="190" y="55" width="70" height="90" rx="6" fill="none" stroke="#333" stroke-width="3"/><line x1="175" y1="100" x2="190" y2="100" stroke="#333" stroke-width="2"/><path d="M104 140 L104 158 M225 145 L225 160" stroke="#666"/><text x="58" y="165" font-size="11">FIELD</text><text x="204" y="165" font-size="11">CITY</text></svg><div class="cap">5) Сравнение масштаба: FIELD vs CITY</div></div>
-      <div class="card"><svg viewBox="0 0 300 180"><circle cx="78" cy="125" r="26" fill="none" stroke="#333" stroke-width="3"/><line x1="102" y1="115" x2="160" y2="95" stroke="#333" stroke-width="3"/><rect x="160" y="80" width="95" height="35" rx="7" fill="none" stroke="#333" stroke-width="3"/><line x1="170" y1="115" x2="130" y2="145" stroke="#333"/><rect x="116" y="140" width="60" height="16" rx="4" fill="none" stroke="#333"/></svg><div class="cap">6) Сцена использования: городской ноутбук и полевой выезд</div></div>
+      <div class="card">
+        <svg viewBox="0 0 300 180" aria-label="FIELD front view">
+          <defs>
+            <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,3 L6,0 L6,6 Z" fill="#707987"/></marker>
+            <marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#0b5cad"/></marker>
+            <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#157347"/></marker>
+          </defs>
+          <rect x="44" y="62" width="212" height="64" rx="11" class="main"/>
+          <rect x="62" y="83" width="20" height="10" class="main" style="stroke-width:1.4"/>
+          <rect x="90" y="83" width="20" height="10" class="main" style="stroke-width:1.4"/>
+          <rect x="205" y="79" width="34" height="17" class="main" style="stroke-width:1.4"/>
+          <line x1="54" y1="141" x2="248" y2="141" class="aux"/>
+          <line x1="44" y1="147" x2="256" y2="147" class="dim"/>
+          <text x="130" y="158" class="txt">145 мм (длина)</text>
+          <line x1="267" y1="62" x2="267" y2="126" class="dim"/>
+          <text x="272" y="96" class="txt">48 мм</text>
+          <text x="60" y="52" class="txt">ВИД СПЕРЕДИ (FIELD)</text>
+          <text x="60" y="78" class="txt">2x USB-A OUT</text>
+          <text x="205" y="75" class="txt">Дисплей</text>
+        </svg>
+        <div class="cap">1) FIELD — фронтальный вид с габаритами и портами</div>
+      </div>
+
+      <div class="card">
+        <svg viewBox="0 0 300 180" aria-label="FIELD left view">
+          <defs>
+            <marker id="arr2" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,3 L6,0 L6,6 Z" fill="#707987"/></marker>
+          </defs>
+          <polygon points="62,118 198,118 228,95 95,95" class="main"/>
+          <line x1="95" y1="95" x2="95" y2="118" class="main" style="stroke-width:1.4"/>
+          <line x1="198" y1="118" x2="198" y2="95" class="main" style="stroke-width:1.4"/>
+          <line x1="228" y1="95" x2="228" y2="118" class="aux"/>
+          <circle cx="220" cy="102" r="4" class="main" style="stroke-width:1.4"/>
+          <line x1="70" y1="132" x2="214" y2="132" class="dim"/>
+          <text x="124" y="144" class="txt">62 мм (ширина)</text>
+          <text x="74" y="86" class="txt">ВИД СЛЕВА (FIELD)</text>
+          <text x="212" y="92" class="txt">USB IN</text>
+        </svg>
+        <div class="cap">2) FIELD — вид слева, отдельный вход USB IN в углу</div>
+      </div>
+
+      <div class="card">
+        <svg viewBox="0 0 300 180" aria-label="FIELD top cut">
+          <rect x="56" y="58" width="186" height="64" rx="8" class="main"/>
+          <rect x="68" y="70" width="44" height="40" class="main" style="stroke-width:1.4"/>
+          <rect x="118" y="70" width="24" height="40" class="main" style="stroke-width:1.4"/>
+          <rect x="148" y="70" width="56" height="40" class="main" style="stroke-width:1.4"/>
+          <rect x="208" y="70" width="24" height="40" class="main" style="stroke-width:1.4"/>
+          <line x1="56" y1="58" x2="242" y2="122" class="aux"/>
+          <text x="66" y="52" class="txt">ВИД СВЕРХУ / разметка модулей</text>
+          <text x="72" y="128" class="txt">АКБ-блок</text>
+          <text x="118" y="128" class="txt">BMS</text>
+          <text x="154" y="128" class="txt">DC-DC</text>
+          <text x="206" y="128" class="txt">I/O</text>
+          <line x1="58" y1="140" x2="240" y2="140" class="flow"/>
+          <text x="92" y="153" class="txt" style="fill:#0b5cad">IN → BMS → АКБ → DC-DC → OUT</text>
+        </svg>
+        <div class="cap">3) FIELD — верхний вид и размещение внутренних модулей</div>
+      </div>
+
+      <div class="card">
+        <svg viewBox="0 0 300 180" aria-label="CITY front view">
+          <rect x="66" y="72" width="168" height="52" rx="10" class="main"/>
+          <rect x="80" y="90" width="18" height="9" class="main" style="stroke-width:1.4"/>
+          <rect x="104" y="90" width="18" height="9" class="main" style="stroke-width:1.4"/>
+          <rect x="188" y="87" width="30" height="14" class="main" style="stroke-width:1.4"/>
+          <line x1="66" y1="132" x2="234" y2="132" class="dim"/>
+          <text x="124" y="144" class="txt">140 мм</text>
+          <line x1="245" y1="72" x2="245" y2="124" class="dim"/>
+          <text x="250" y="99" class="txt">45 мм</text>
+          <text x="70" y="62" class="txt">ВИД СПЕРЕДИ (CITY)</text>
+        </svg>
+        <div class="cap">4) CITY — компактный фронтальный вид с портовой панелью</div>
+      </div>
+
+      <div class="card">
+        <svg viewBox="0 0 300 180" aria-label="cutaway">
+          <rect x="44" y="64" width="126" height="70" rx="9" class="main"/>
+          <rect x="184" y="50" width="70" height="94" rx="9" class="main"/>
+          <line x1="170" y1="95" x2="184" y2="95" class="main"/>
+          <rect x="54" y="74" width="44" height="50" class="aux"/>
+          <rect x="102" y="74" width="20" height="50" class="aux"/>
+          <rect x="126" y="74" width="34" height="50" class="aux"/>
+          <line x1="66" y1="150" x2="66" y2="130" class="aux"/><text x="52" y="160" class="txt">АКБ</text>
+          <line x1="112" y1="150" x2="112" y2="130" class="aux"/><text x="103" y="160" class="txt">BMS</text>
+          <line x1="142" y1="150" x2="142" y2="130" class="aux"/><text x="132" y="160" class="txt">DC-DC</text>
+          <line x1="220" y1="150" x2="220" y2="144" class="aux"/><text x="208" y="160" class="txt">CITY</text>
+          <text x="56" y="56" class="txt">РАЗРЕЗ / объемы и узлы (FIELD vs CITY)</text>
+        </svg>
+        <div class="cap">5) Разрез: внутренние объемы, блоки и различие масштаба</div>
+      </div>
+
+      <div class="card">
+        <svg viewBox="0 0 300 180" aria-label="electrical flow and use">
+          <circle cx="52" cy="114" r="24" class="main"/>
+          <rect x="124" y="84" width="92" height="36" rx="7" class="main"/>
+          <rect x="96" y="132" width="64" height="16" rx="4" class="main" style="stroke-width:1.4"/>
+          <path d="M76 106 C96 98, 104 95, 124 90" class="flow"/>
+          <path d="M124 122 C112 130, 104 136, 96 140" class="flow2"/>
+          <text x="26" y="154" class="txt">Потребитель</text>
+          <text x="132" y="78" class="txt">Модуль питания</text>
+          <text x="98" y="128" class="txt" style="fill:#157347">OUT 5–20V</text>
+          <text x="82" y="88" class="txt" style="fill:#0b5cad">IN 5–20V</text>
+          <text x="12" y="30" class="txt">ЭЛЕКТРИЧЕСКИЙ ПОТОК И СЦЕНАРИЙ ИСПОЛЬЗОВАНИЯ</text>
+        </svg>
+        <div class="cap">6) Схема потока энергии: вход/преобразование/выход в среде использования</div>
+      </div>
     </div>
   </div>
 </body>
