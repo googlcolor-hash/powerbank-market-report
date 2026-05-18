@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Инвестиционный проект: Компактный Power-модуль (NotebookLM brief)</title>
+  <style>
+    :root{
+      --bg:#0e1117;
+      --panel:#161b25;
+      --ink:#ecf1fb;
+      --muted:#aab6ca;
+      --line:#2b3446;
+      --a:#62b8ff;
+      --b:#79f0ca;
+      --warn:#ffd66b;
+      --ok:#7de4a5;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      color:var(--ink);
+      background:
+        radial-gradient(1200px 420px at 20% -10%, #193054 0%, transparent 50%),
+        radial-gradient(1100px 430px at 90% 0%, #183d35 0%, transparent 45%),
+        var(--bg);
+      font-family:"Segoe UI","Inter",system-ui,sans-serif;
+    }
+    .wrap{max-width:1280px;margin:0 auto;padding:26px 20px 60px}
+    .top{
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:16px;
+      align-items:stretch;
+    }
+    .hero,.meta{background:var(--panel);border:1px solid var(--line);border-radius:16px}
+    .hero{padding:18px}
+    h1{margin:0 0 8px;font-size:36px;line-height:1.05}
+    .sub{margin:0;color:var(--muted)}
+    .chips{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
+    .chip{
+      border:1px solid var(--line);
+      border-radius:999px;
+      padding:7px 10px;
+      font-size:12px;
+      color:#d4ddf1;
+      background:#101623;
+    }
+    .meta{padding:16px}
+    .kv{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+    .k{
+      padding:10px;border:1px solid var(--line);border-radius:10px;background:#101623
+    }
+    .k b{display:block;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+    .k span{font-size:18px;font-weight:700}
+    .sec{margin-top:18px;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px}
+    h2{margin:0 0 12px;font-size:24px}
+    .timeline{
+      display:grid;
+      grid-template-columns:repeat(4,minmax(140px,1fr));
+      gap:10px;
+    }
+    .step{
+      border:1px solid var(--line);border-radius:12px;padding:12px;background:#101723
+    }
+    .step .icon{font-size:22px}
+    .step b{display:block;margin-top:6px}
+    .step p{margin:5px 0 0;color:var(--muted);font-size:13px}
+    .table-wrap{overflow:auto;border:1px solid var(--line);border-radius:12px}
+    table{width:100%;border-collapse:collapse;min-width:980px}
+    th,td{padding:9px 10px;border-bottom:1px solid #253045;font-size:13px;vertical-align:top}
+    th{background:#1a2436;position:sticky;top:0;text-align:left}
+    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .card{border:1px solid var(--line);background:#101723;border-radius:12px;padding:12px}
+    .card h3{margin:0 0 8px;font-size:17px}
+    .card ul{margin:0;padding-left:18px}
+    .card li{margin:6px 0;color:#d3ddf0}
+    .money{
+      display:grid;grid-template-columns:repeat(3,minmax(180px,1fr));gap:10px
+    }
+    .money .box{
+      border:1px solid var(--line);border-radius:12px;padding:12px;background:#101723
+    }
+    .money .box b{display:block;font-size:12px;color:var(--muted)}
+    .money .box span{font-size:22px;font-weight:700}
+    .risk{border-left:4px solid var(--warn)}
+    .ok{border-left:4px solid var(--ok)}
+    .foot{margin-top:14px;color:var(--muted);font-size:12px;line-height:1.5}
+    a{color:#94c9ff;text-decoration:none}
+    a:hover{text-decoration:underline}
+    @media (max-width:980px){
+      .top,.grid2{grid-template-columns:1fr}
+      .timeline{grid-template-columns:1fr 1fr}
+      .money{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="top">
+      <div class="hero">
+        <h1>Инвестиционный проект<br>Компактный металлический Power-модуль</h1>
+        <p class="sub">NotebookLM brief интегрирован в отдельную страницу сайта: рынок 2026, сравнение аналогов, юнит-экономика, риски и инвестиционный запрос.</p>
+        <div class="chips">
+          <span class="chip">2x USB-A OUT</span>
+          <span class="chip">1x USB IN</span>
+          <span class="chip">Цифровой % дисплей</span>
+          <span class="chip">Металлический корпус</span>
+          <span class="chip">РФ-производственный контур</span>
+        </div>
+      </div>
+      <div class="meta">
+        <div class="kv">
+          <div class="k"><b>Дата актуальности</b><span>Фев–май 2026</span></div>
+          <div class="k"><b>Рынок РФ</b><span>18.7 млрд ₽</span></div>
+          <div class="k"><b>Рост сегмента</b><span>+47% YoY</span></div>
+          <div class="k"><b>Инвест-запрос</b><span>15 млн ₽</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec">
+      <h2>Проблема → Решение → Roadmap</h2>
+      <div class="timeline">
+        <article class="step"><div class="icon">⚠️</div><b>Проблема</b><p>Импортозависимость, длинная логистика (от 23 дней), дефицит долговечных “полевых” решений.</p></article>
+        <article class="step"><div class="icon">🧩</div><b>Решение</b><p>Компактный модуль с теплоотводом, многопортовостью и сервисным UX (дисплей, прочный корпус).</p></article>
+        <article class="step"><div class="icon">⚙️</div><b>Разработка</b><p>Плата 8 недель, прошивка до 4 месяцев, тестирование, пилотная серия.</p></article>
+        <article class="step"><div class="icon">🚀</div><b>Запуск</b><p>Маркетплейсы + B2B, масштаб в 2 500 шт/мес к 12-му месяцу.</p></article>
+      </div>
+    </section>
+
+    <section class="sec">
+      <h2>Сравнение аналогов (сводка NotebookLM)</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Модель</th><th>Емкость</th><th>Мощность</th><th>Порты</th><th>Вес</th><th>Цена (РФ)</th><th>Доставка / страна</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Xiaomi PB 3</td><td>20k / 74Wh</td><td>18W</td><td>2×A, 1×C</td><td>434 г</td><td>2 490 ₽</td><td>Наличие РФ</td></tr>
+            <tr><td>Baseus 65W</td><td>20k / 74Wh</td><td>65W</td><td>2×A, 2×C</td><td>460 г</td><td>4 990 ₽</td><td>Наличие РФ</td></tr>
+            <tr><td>Anker Slim</td><td>10k / 37Wh</td><td>12W</td><td>2×A, 1×C</td><td>212 г</td><td>2 990 ₽</td><td>Наличие РФ</td></tr>
+            <tr><td>HIPER MP</td><td>20k / 74Wh</td><td>22.5W</td><td>2×A, 1×C*</td><td>380 г</td><td>3 490 ₽</td><td>Наличие РФ</td></tr>
+            <tr><td>Samsung P3300</td><td>10k / 37Wh</td><td>25W</td><td>2×C</td><td>188 г</td><td>3 990 ₽</td><td>Наличие РФ</td></tr>
+            <tr><td>ZMI QB820</td><td>20k / 74Wh</td><td>45W</td><td>2×A, 1×C</td><td>440 г</td><td>~4 900 ₽</td><td>Китай, ~ $3.3/кг</td></tr>
+            <tr><td>Romoss Sense</td><td>30k / 111Wh</td><td>22.5W</td><td>2×A, 1×C</td><td>665 г</td><td>~3 000 ₽</td><td>Китай, ~ $3.1/кг</td></tr>
+            <tr><td>Defender Extra</td><td>10k / 37Wh</td><td>10W</td><td>2×A</td><td>240 г</td><td>&lt;1 500 ₽</td><td>Наличие РФ</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="foot">* Для HIPER отмечено наличие встроенных кабелей. Цены и логистика — ориентир по предоставленному брифу, требуют контрольной валидации перед коммерческим решением.</p>
+    </section>
+
+    <section class="sec grid2">
+      <article class="card">
+        <h3>Лидеры / аутсайдеры (конкретно)</h3>
+        <ul>
+          <li><b>Лидер по мощности:</b> Baseus 65W (но тяжелее целевого lightweight-класса).</li>
+          <li><b>Лидер по компактности:</b> Samsung P3300 (188 г), но меньше гибкость портов.</li>
+          <li><b>Лучший price/value:</b> Xiaomi PB 3 в нижнем среднем сегменте.</li>
+          <li><b>Ближе к нашему формату:</b> ZMI QB820 (дисплей + мощность), но дороже и крупнее.</li>
+          <li><b>Аутсайдер по rugged и скорости:</b> Defender Extra (10W, базовый пластик).</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Формы позиционирования проекта</h3>
+        <ul>
+          <li><b>Field Brick 100-120W:</b> “полевой модуль” для сервисных и выездных задач.</li>
+          <li><b>Made in Russia Performance:</b> локальная сборка + ремонтопригодность.</li>
+          <li><b>Pro-Compact Workhorse:</b> надежный “рабочий кирпич” вместо хрупких consumer-банков.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="sec">
+      <h2>Юнит-экономика и инвестиционный запрос</h2>
+      <div class="money">
+        <div class="box"><b>COGS (1 шт)</b><span>~1 200 ₽</span></div>
+        <div class="box"><b>CAC</b><span>~400 ₽</span></div>
+        <div class="box"><b>Прочие</b><span>~200 ₽</span></div>
+      </div>
+      <div class="grid2" style="margin-top:12px">
+        <article class="card ok">
+          <h3>Сценарии продаж</h3>
+          <ul>
+            <li><b>Консервативный:</b> 2 400 ₽, маржа ~25%</li>
+            <li><b>Базовый:</b> 3 200 ₽, маржа ~44%</li>
+            <li><b>Оптимистичный:</b> 3 900 ₽, маржа ~53%</li>
+          </ul>
+        </article>
+        <article class="card risk">
+          <h3>Риски и mitigation</h3>
+          <ul>
+            <li>Пошлины / импортные ограничения → локализация и альтернативные каналы закупки.</li>
+            <li>Дефицит чипов → страховой склад 6–12 месяцев.</li>
+            <li>Логистика Li-ion → заранее фиксированные договоры с ТК.</li>
+          </ul>
+        </article>
+      </div>
+      <div class="money" style="margin-top:12px">
+        <div class="box"><b>Точка безубыточности</b><span>~1 072 шт/мес</span></div>
+        <div class="box"><b>Инвест-запрос</b><span>15 млн ₽</span></div>
+        <div class="box"><b>Цель 12 мес</b><span>2 500 шт/мес</span></div>
+      </div>
+      <p class="foot">
+        Распределение инвестиций: 4 млн ₽ R&D и оснастка, 7 млн ₽ первая партия, 4 млн ₽ маркетинг и листинг.
+        Вернуться к основной странице отчета: <a href="./index.html">сравнение аналогов</a>.
+      </p>
+    </section>
+  </div>
+</body>
+</html>
