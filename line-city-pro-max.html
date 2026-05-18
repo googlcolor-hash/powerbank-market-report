@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CITY PRO MAX — Городская линейка</title>
+  <style>
+    :root{--bg:#0c1018;--panel:#141b29;--line:#2a3447;--ink:#edf3ff;--muted:#aeb9cd;--a:#6dc1ff;--b:#8ff6d1}
+    *{box-sizing:border-box} html,body{height:100%;margin:0;overflow:hidden}
+    body{font-family:"Segoe UI","Inter",system-ui,sans-serif;color:var(--ink);background:radial-gradient(1100px 420px at 0 0,#1a2d48 0%,transparent 58%),radial-gradient(900px 380px at 100% 0,#1a3f39 0%,transparent 54%),var(--bg)}
+    .app{height:100%;display:grid;grid-template-rows:auto 1fr}
+    .top{display:flex;justify-content:space-between;align-items:center;padding:10px 16px;border-bottom:1px solid var(--line);background:#0e1522cc;backdrop-filter:blur(8px)}
+    .brand{font-weight:800;letter-spacing:.04em}
+    .nav a{color:#a8d5ff;text-decoration:none;margin-left:12px;font-size:13px}
+    .main{height:100%;display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:12px}
+    .left,.right{background:var(--panel);border:1px solid var(--line);border-radius:14px;min-height:0}
+    .left{display:grid;grid-template-rows:auto auto auto 1fr;padding:16px}
+    h1{margin:0;font-size:34px;line-height:1.02}
+    .tag{display:inline-block;padding:6px 10px;border-radius:999px;background:linear-gradient(90deg,var(--a),var(--b));color:#041727;font-weight:700;font-size:12px}
+    .lead{color:var(--muted);margin:8px 0 10px;font-size:14px}
+    .spec{display:grid;grid-template-columns:repeat(2,minmax(120px,1fr));gap:8px}
+    .box{padding:10px;border:1px solid var(--line);border-radius:10px;background:#101827}
+    .box b{display:block;color:var(--muted);font-size:11px}
+    .box span{font-size:18px;font-weight:700}
+    .list{margin:10px 0 0;padding-left:18px}
+    .list li{margin:5px 0;color:#d3ddf2;font-size:13px}
+    .cta{margin-top:8px;padding:10px;border:1px solid var(--line);border-radius:10px;background:#0f1624;color:#cfe0ff;font-size:13px}
+    .right{position:relative;overflow:hidden}
+    #c{width:100%;height:100%;display:block}
+    .hint{position:absolute;bottom:10px;left:10px;font-size:12px;color:#bdd0ec;background:#0d1524cc;border:1px solid #2b3850;border-radius:8px;padding:6px 8px}
+    @media (max-width:980px){.main{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="app">
+    <div class="top">
+      <div class="brand">CITY PRO MAX</div>
+      <div class="nav">
+        <a href="./line-field-titan-x.html">Field</a>
+        <a href="./line-city-pro-max.html">City</a>
+        <a href="./line-compare-dual-series.html">Compare</a>
+      </div>
+    </div>
+    <div class="main">
+      <section class="left">
+        <div>
+          <span class="tag">Городская серия</span>
+          <h1>CITY<br>PRO MAX</h1>
+          <p class="lead">Мощный компактный power‑блок для ноутбука, телефона, камеры и мобильной работы каждый день.</p>
+        </div>
+        <div class="spec">
+          <div class="box"><b>Емкость</b><span>90–150 Wh</span></div>
+          <div class="box"><b>USB-C PD</b><span>до 140W</span></div>
+          <div class="box"><b>Масса</b><span>&lt; 700 г</span></div>
+          <div class="box"><b>Габариты</b><span>компактный brick</span></div>
+        </div>
+        <ul class="list">
+          <li>1–2x USB-C + 1–2x USB-A, приоритет быстрой зарядки ноутбуков</li>
+          <li>Тихий термоконтроль и безопасная зарядка “на столе”</li>
+          <li>Премиальный металл-корпус, понятный UX и экран процента</li>
+          <li>Сценарий: “вышел из дома — закрыл день без розетки”</li>
+        </ul>
+        <div class="cta">Лозунг: “One compact brick. Full workday power.”</div>
+      </section>
+      <section class="right">
+        <canvas id="c"></canvas>
+        <div class="hint">ЛКМ: вращение · колесо: масштаб · ПКМ: панорама</div>
+      </section>
+    </div>
+  </div>
+  <script type="module">
+    import * as THREE from 'https://unpkg.com/three@0.164.1/build/three.module.js';
+    import { OrbitControls } from 'https://unpkg.com/three@0.164.1/examples/jsm/controls/OrbitControls.js';
+    const canvas=document.getElementById('c'); const renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true});
+    renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+    const scene=new THREE.Scene();
+    const camera=new THREE.PerspectiveCamera(45,1,.1,100); camera.position.set(2.8,1.6,3.1);
+    const controls=new OrbitControls(camera,canvas); controls.enableDamping=true; controls.target.set(0,.12,0);
+    scene.add(new THREE.HemisphereLight(0xc4deff,0x122036,1.1));
+    const dl=new THREE.DirectionalLight(0xffffff,1.05); dl.position.set(4,5,2); scene.add(dl);
+    const body=new THREE.Mesh(new THREE.BoxGeometry(2.2,.72,1.42), new THREE.MeshPhysicalMaterial({color:0x2f3846,metalness:.88,roughness:.22,clearcoat:.45}));
+    scene.add(body);
+    const trim=new THREE.Mesh(new THREE.BoxGeometry(2.24,.04,1.46), new THREE.MeshStandardMaterial({color:0x8ea0b9,metalness:.76,roughness:.3}));
+    trim.position.y=.38; scene.add(trim); const trim2=trim.clone(); trim2.position.y=-.38; scene.add(trim2);
+    const screen=new THREE.Mesh(new THREE.PlaneGeometry(.48,.2), new THREE.MeshBasicMaterial({color:0x97ffd6,transparent:true,opacity:.88}));
+    screen.position.set(1.11,-.04,.2); screen.rotation.y=Math.PI/2; scene.add(screen);
+    const portMat=new THREE.MeshStandardMaterial({color:0x8fd4ff,metalness:.58,roughness:.35});
+    function addPort(y,z,w=.02,h=.1,d=.2){const p=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),portMat);p.position.set(1.11,y,z);scene.add(p);}
+    addPort(.14,.45,.02,.11,.24); addPort(.14,.15,.02,.11,.24); addPort(-.1,-.2,.02,.1,.18);
+    const red=new THREE.PointLight(0xff4040,.9,2.2); red.position.set(-.6,-.22,.2); scene.add(red);
+    const floor=new THREE.Mesh(new THREE.CircleGeometry(4.5,48), new THREE.MeshBasicMaterial({color:0x0c1320,transparent:true,opacity:.52}));
+    floor.rotation.x=-Math.PI/2; floor.position.y=-.42; scene.add(floor);
+    function resize(){const w=canvas.clientWidth,h=canvas.clientHeight;if(canvas.width!==w||canvas.height!==h){renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();}}
+    function loop(){resize(); controls.update(); body.rotation.y+=0.0018; renderer.render(scene,camera); requestAnimationFrame(loop);}
+    loop();
+  </script>
+</body>
+</html>

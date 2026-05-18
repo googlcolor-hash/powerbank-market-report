@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FIELD TITAN X — Экстремальная линейка</title>
+  <style>
+    :root{
+      --bg:#0b0f14;--panel:#121926;--line:#2a3242;--ink:#ecf2ff;--muted:#aab4c8;--acc:#72c4ff;--acc2:#89ffd4;
+    }
+    *{box-sizing:border-box} html,body{height:100%;margin:0;overflow:hidden}
+    body{
+      font-family:"Segoe UI","Inter",system-ui,sans-serif;color:var(--ink);
+      background:radial-gradient(1200px 500px at 10% -20%,#1d304d 0%,transparent 55%),radial-gradient(1000px 440px at 90% 0%,#1b4a40 0%,transparent 55%),var(--bg);
+    }
+    .app{height:100%;display:grid;grid-template-rows:auto 1fr}
+    .top{
+      display:flex;justify-content:space-between;align-items:center;padding:10px 16px;border-bottom:1px solid var(--line);background:#0e141fbb;backdrop-filter:blur(8px)
+    }
+    .brand{font-weight:800;letter-spacing:.04em}
+    .nav a{color:#a8d5ff;text-decoration:none;margin-left:12px;font-size:13px}
+    .main{
+      display:grid;grid-template-columns:1.05fr 1fr;gap:12px;padding:12px;height:100%;
+    }
+    .left,.right{background:var(--panel);border:1px solid var(--line);border-radius:14px;min-height:0}
+    .left{display:grid;grid-template-rows:auto auto 1fr auto;padding:16px}
+    h1{margin:0;font-size:34px;line-height:1.02}
+    .tag{display:inline-block;padding:6px 10px;border-radius:999px;background:linear-gradient(90deg,var(--acc),var(--acc2));color:#021726;font-weight:700;font-size:12px}
+    .lead{color:var(--muted);margin:8px 0 10px;font-size:14px}
+    .spec{
+      display:grid;grid-template-columns:repeat(2,minmax(120px,1fr));gap:8px
+    }
+    .box{padding:10px;border:1px solid var(--line);border-radius:10px;background:#0f1623}
+    .box b{display:block;color:var(--muted);font-size:11px}
+    .box span{font-size:18px;font-weight:700}
+    .bul{margin:10px 0 0;padding-left:18px;line-height:1.35}
+    .bul li{margin:5px 0;color:#d5def0;font-size:13px}
+    .foot{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--muted)}
+    .btn{border:1px solid var(--line);background:#101927;color:#d5e8ff;border-radius:9px;padding:8px 10px;cursor:pointer}
+    .right{position:relative;overflow:hidden}
+    #c{width:100%;height:100%;display:block}
+    .hint{position:absolute;bottom:10px;left:10px;font-size:12px;color:#b8c7e2;background:#0d1524cc;border:1px solid #2b3850;border-radius:8px;padding:6px 8px}
+    @media (max-width:980px){.main{grid-template-columns:1fr}.left{grid-template-rows:auto auto auto auto}}
+  </style>
+</head>
+<body>
+  <div class="app">
+    <div class="top">
+      <div class="brand">FIELD TITAN X</div>
+      <div class="nav">
+        <a href="./line-field-titan-x.html">Field</a>
+        <a href="./line-city-pro-max.html">City</a>
+        <a href="./line-compare-dual-series.html">Compare</a>
+      </div>
+    </div>
+    <div class="main">
+      <section class="left">
+        <div>
+          <span class="tag">Экстремальная серия</span>
+          <h1>FIELD<br>TITAN X</h1>
+          <p class="lead">Полевой энергомодуль для агрессивной среды: мороз, пыль, вибрации, дождь, ударные нагрузки.</p>
+        </div>
+        <div class="spec">
+          <div class="box"><b>Емкость</b><span>300–500 Wh</span></div>
+          <div class="box"><b>Мощность</b><span>до 300W</span></div>
+          <div class="box"><b>Защита</b><span>IP67/IP68</span></div>
+          <div class="box"><b>Температура</b><span>-30..+55°C</span></div>
+        </div>
+        <ul class="bul">
+          <li>2x USB-A OUT, 2x USB-C PD, 12V DC, опц. AC-инвертор</li>
+          <li>Герметичные порты, ударопоглощение, сервисные крепления</li>
+          <li>Модульная BMS: баланс, защита от КЗ/перегрева/перенапряжения</li>
+          <li>Режим аварийного питания и яркая индикация в поле</li>
+        </ul>
+        <div class="foot">
+          <span>Лозунг: “Power where failure is not an option.”</span>
+          <button class="btn" id="xrayBtn">X-Ray preview</button>
+        </div>
+      </section>
+      <section class="right">
+        <canvas id="c"></canvas>
+        <div class="hint">ЛКМ: вращение · колесо: масштаб · ПКМ: панорама</div>
+      </section>
+    </div>
+  </div>
+  <script type="module">
+    import * as THREE from 'https://unpkg.com/three@0.164.1/build/three.module.js';
+    import { OrbitControls } from 'https://unpkg.com/three@0.164.1/examples/jsm/controls/OrbitControls.js';
+    const canvas = document.getElementById('c');
+    const r = new THREE.WebGLRenderer({canvas,antialias:true,alpha:true});
+    r.setPixelRatio(Math.min(devicePixelRatio,2));
+    const scene = new THREE.Scene();
+    const cam = new THREE.PerspectiveCamera(45,1,0.1,100); cam.position.set(3.4,2.2,3.6);
+    const ctl = new OrbitControls(cam,canvas); ctl.enableDamping=true; ctl.target.set(0,.3,0);
+    const light = new THREE.HemisphereLight(0xbad7ff,0x132235,1.15); scene.add(light);
+    const key = new THREE.DirectionalLight(0xffffff,1.1); key.position.set(4,5,3); scene.add(key);
+    const body = new THREE.Mesh(new THREE.BoxGeometry(3.1,1.1,1.6), new THREE.MeshPhysicalMaterial({color:0x2c3440,metalness:.92,roughness:.28,clearcoat:.4}));
+    scene.add(body);
+    const rails = new THREE.Mesh(new THREE.BoxGeometry(3.2,.08,1.65), new THREE.MeshStandardMaterial({color:0x596a7f,metalness:.8,roughness:.35}));
+    rails.position.y=.57; scene.add(rails);
+    const rails2 = rails.clone(); rails2.position.y=-.57; scene.add(rails2);
+    const face = new THREE.Mesh(new THREE.BoxGeometry(.05,.86,1.28), new THREE.MeshStandardMaterial({color:0x1c2431,metalness:.25,roughness:.6}));
+    face.position.x=1.575; scene.add(face);
+    const face2 = face.clone(); face2.position.x=-1.575; scene.add(face2);
+    function port(x,y,z,w,h,d,c){const m=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),new THREE.MeshStandardMaterial({color:c,metalness:.6,roughness:.35}));m.position.set(x,y,z);scene.add(m);}
+    port(1.55,0.18,0.33,.02,.11,.34,0x84a2c3); port(1.55,0.18,-0.08,.02,.11,.34,0x84a2c3);
+    port(-1.55,-0.08,0.56,.02,.12,.18,0x8fd4ff);
+    const led = new THREE.Mesh(new THREE.PlaneGeometry(.55,.22),new THREE.MeshBasicMaterial({color:0x88f7d8,transparent:true,opacity:.9}));
+    led.position.set(1.54,-0.2,0.02); led.rotation.y=Math.PI/2; scene.add(led);
+    const glow = new THREE.PointLight(0xff3a3a,1.2,4); glow.position.set(-1.1,-.35,0); scene.add(glow);
+    const floor = new THREE.Mesh(new THREE.CircleGeometry(6,64), new THREE.MeshBasicMaterial({color:0x0c1320,transparent:true,opacity:.55}));
+    floor.rotation.x=-Math.PI/2; floor.position.y=-.62; scene.add(floor);
+    let xray=false;
+    document.getElementById('xrayBtn').onclick=()=>{xray=!xray; [body,rails,rails2,face,face2].forEach(m=>{m.material.transparent=xray;m.material.opacity=xray?0.38:1;});};
+    function resize(){const w=canvas.clientWidth,h=canvas.clientHeight;if(canvas.width!==w||canvas.height!==h){r.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix();}}
+    function tick(){resize(); ctl.update(); body.rotation.y += 0.0015; r.render(scene,cam); requestAnimationFrame(tick);}
+    tick();
+  </script>
+</body>
+</html>
