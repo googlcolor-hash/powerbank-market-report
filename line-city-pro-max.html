@@ -27,6 +27,20 @@
     .cta{margin-top:8px;padding:10px;border:1px solid var(--line);border-radius:10px;background:#0f1624;color:#cfe0ff;font-size:13px}
     .right{position:relative;overflow:hidden}
     #c{width:100%;height:100%;display:block}
+    .fallback{
+      position:absolute;inset:14px;border:1px dashed #365071;border-radius:14px;pointer-events:none;
+      background:
+        linear-gradient(transparent 95%, #27405e 95%) 0 0/100% 24px,
+        linear-gradient(90deg,transparent 95%, #27405e 95%) 0 0/24px 100%;
+      opacity:.52;
+    }
+    .unit{
+      position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) rotate(-10deg);
+      width:54%;height:20%;border:2px solid #a9bdd5;border-radius:10px;background:rgba(18,28,42,.35);
+      box-shadow:0 0 0 1px #3c5575 inset;
+    }
+    .port{position:absolute;left:8%;top:34%;width:8%;height:22%;border:2px solid #7cc4ff;border-radius:3px}
+    .screen{position:absolute;right:9%;top:32%;width:18%;height:26%;border:2px solid #93ffd8;border-radius:4px}
     .hint{position:absolute;bottom:10px;left:10px;font-size:12px;color:#bdd0ec;background:#0d1524cc;border:1px solid #2b3850;border-radius:8px;padding:6px 8px}
     @media (max-width:980px){.main{grid-template-columns:1fr}}
   </style>
@@ -39,6 +53,7 @@
         <a href="./line-field-titan-x.html">Field</a>
         <a href="./line-city-pro-max.html">City</a>
         <a href="./line-compare-dual-series.html">Compare</a>
+        <a href="./line-sketchboard-6views.html">Sketches</a>
       </div>
     </div>
     <div class="main">
@@ -64,6 +79,7 @@
       </section>
       <section class="right">
         <canvas id="c"></canvas>
+        <div class="fallback"><div class="unit"><div class="port"></div><div class="screen"></div></div></div>
         <div class="hint">ЛКМ: вращение · колесо: масштаб · ПКМ: панорама</div>
       </section>
     </div>

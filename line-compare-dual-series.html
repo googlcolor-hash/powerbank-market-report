@@ -17,6 +17,16 @@
     .view{position:relative;overflow:hidden}
     canvas{width:100%;height:100%;display:block}
     .cap{position:absolute;top:10px;left:10px;background:#0d1524c9;border:1px solid #2c3850;border-radius:8px;padding:6px 8px;font-size:12px}
+    .fallback{
+      position:absolute;inset:14px;border:1px dashed #365071;border-radius:14px;pointer-events:none;opacity:.52;
+      background:
+        linear-gradient(transparent 95%, #27405e 95%) 0 0/100% 24px,
+        linear-gradient(90deg,transparent 95%, #27405e 95%) 0 0/24px 100%;
+    }
+    .unit{
+      position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) rotate(-10deg);
+      width:56%;height:23%;border:2px solid #a9bdd5;border-radius:10px;background:rgba(18,28,42,.35);
+    }
     .table{padding:12px;overflow:auto}
     table{width:100%;border-collapse:collapse;min-width:540px}
     th,td{padding:8px 9px;border-bottom:1px solid #283246;font-size:13px;text-align:left;vertical-align:top}
@@ -37,12 +47,13 @@
         <a href="./line-field-titan-x.html">Field</a>
         <a href="./line-city-pro-max.html">City</a>
         <a href="./line-compare-dual-series.html">Compare</a>
+        <a href="./line-sketchboard-6views.html">Sketches</a>
       </div>
     </div>
     <div class="main">
       <div class="row">
-        <section class="panel view"><canvas id="field"></canvas><div class="cap"><span class="tag">FIELD TITAN X</span><br>Экстремальная серия</div></section>
-        <section class="panel view"><canvas id="city"></canvas><div class="cap"><span class="tag">CITY PRO MAX</span><br>Городская серия</div></section>
+        <section class="panel view"><canvas id="field"></canvas><div class="fallback"><div class="unit"></div></div><div class="cap"><span class="tag">FIELD TITAN X</span><br>Экстремальная серия</div></section>
+        <section class="panel view"><canvas id="city"></canvas><div class="fallback"><div class="unit"></div></div><div class="cap"><span class="tag">CITY PRO MAX</span><br>Городская серия</div></section>
         <section class="panel table">
           <table>
             <thead><tr><th>Параметр</th><th>FIELD TITAN X</th><th>CITY PRO MAX</th></tr></thead>

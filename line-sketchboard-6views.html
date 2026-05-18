@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sketchboard — 6 ракурсов и сценариев</title>
+  <style>
+    :root{--bg:#f5f2ea;--ink:#1f1f1f;--muted:#555;--line:#999}
+    *{box-sizing:border-box} html,body{height:100%;margin:0}
+    body{font-family:"Segoe UI",system-ui,sans-serif;background:var(--bg);color:var(--ink)}
+    .wrap{height:100%;display:grid;grid-template-rows:auto 1fr;padding:10px 14px;gap:10px}
+    .top{display:flex;justify-content:space-between;align-items:center}
+    .title{font-weight:800;font-size:20px}
+    .nav a{margin-left:10px;color:#0b4a7a;text-decoration:none;font-size:13px}
+    .grid{height:100%;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,1fr);gap:10px}
+    .card{background:#fff;border:2px solid #d8d2c5;border-radius:10px;padding:8px;display:grid;grid-template-rows:1fr auto}
+    svg{width:100%;height:100%;display:block}
+    .cap{font-size:12px;color:var(--muted)}
+    @media (max-width:1000px){.grid{grid-template-columns:1fr 1fr 1fr;grid-template-rows:repeat(2,220px)}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <div class="title">Sketchboard: FIELD TITAN X + CITY PRO MAX (6 кадров)</div>
+      <div class="nav">
+        <a href="./line-field-titan-x.html">Field</a>
+        <a href="./line-city-pro-max.html">City</a>
+        <a href="./line-compare-dual-series.html">Compare</a>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="card"><svg viewBox="0 0 300 180"><rect x="40" y="70" width="220" height="55" rx="8" fill="none" stroke="#333" stroke-width="3"/><rect x="58" y="87" width="24" height="10" fill="none" stroke="#333"/><rect x="90" y="87" width="24" height="10" fill="none" stroke="#333"/><rect x="210" y="84" width="34" height="18" fill="none" stroke="#333"/><line x1="30" y1="140" x2="270" y2="140" stroke="#888" stroke-dasharray="5 4"/></svg><div class="cap">1) FIELD — фронтальный ракурс, порты и экран</div></div>
+      <div class="card"><svg viewBox="0 0 300 180"><polygon points="70,120 220,120 250,95 105,95" fill="none" stroke="#333" stroke-width="3"/><line x1="105" y1="95" x2="105" y2="120" stroke="#333"/><line x1="220" y1="120" x2="220" y2="95" stroke="#333"/><circle cx="238" cy="103" r="4" fill="none" stroke="#333"/></svg><div class="cap">2) FIELD — боковой ракурс, защищенный угол</div></div>
+      <div class="card"><svg viewBox="0 0 300 180"><rect x="36" y="66" width="228" height="62" rx="8" fill="none" stroke="#333" stroke-width="3"/><polyline points="68,66 88,38 213,38 232,66" fill="none" stroke="#333" stroke-width="2"/><line x1="88" y1="38" x2="213" y2="38" stroke="#666" stroke-dasharray="4 4"/></svg><div class="cap">3) FIELD — верх, сервисный контур и “бронекапсула”</div></div>
+      <div class="card"><svg viewBox="0 0 300 180"><rect x="70" y="78" width="165" height="42" rx="9" fill="none" stroke="#333" stroke-width="3"/><rect x="83" y="92" width="20" height="8" fill="none" stroke="#333"/><rect x="110" y="92" width="20" height="8" fill="none" stroke="#333"/><rect x="190" y="89" width="30" height="13" fill="none" stroke="#333"/></svg><div class="cap">4) CITY — фронт, минималистичная портовая панель</div></div>
+      <div class="card"><svg viewBox="0 0 300 180"><rect x="45" y="70" width="130" height="70" rx="8" fill="none" stroke="#333" stroke-width="3"/><rect x="190" y="55" width="70" height="90" rx="6" fill="none" stroke="#333" stroke-width="3"/><line x1="175" y1="100" x2="190" y2="100" stroke="#333" stroke-width="2"/><path d="M104 140 L104 158 M225 145 L225 160" stroke="#666"/><text x="58" y="165" font-size="11">FIELD</text><text x="204" y="165" font-size="11">CITY</text></svg><div class="cap">5) Сравнение масштаба: FIELD vs CITY</div></div>
+      <div class="card"><svg viewBox="0 0 300 180"><circle cx="78" cy="125" r="26" fill="none" stroke="#333" stroke-width="3"/><line x1="102" y1="115" x2="160" y2="95" stroke="#333" stroke-width="3"/><rect x="160" y="80" width="95" height="35" rx="7" fill="none" stroke="#333" stroke-width="3"/><line x1="170" y1="115" x2="130" y2="145" stroke="#333"/><rect x="116" y="140" width="60" height="16" rx="4" fill="none" stroke="#333"/></svg><div class="cap">6) Сцена использования: городской ноутбук и полевой выезд</div></div>
+    </div>
+  </div>
+</body>
+</html>

@@ -39,6 +39,21 @@
     .btn{border:1px solid var(--line);background:#101927;color:#d5e8ff;border-radius:9px;padding:8px 10px;cursor:pointer}
     .right{position:relative;overflow:hidden}
     #c{width:100%;height:100%;display:block}
+    .fallback{
+      position:absolute;inset:14px;border:1px dashed #365071;border-radius:14px;pointer-events:none;
+      background:
+        linear-gradient(transparent 95%, #27405e 95%) 0 0/100% 24px,
+        linear-gradient(90deg,transparent 95%, #27405e 95%) 0 0/24px 100%;
+      opacity:.55;
+    }
+    .unit{
+      position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) rotate(-12deg);
+      width:58%;height:26%;border:2px solid #9fb5cf;border-radius:10px;background:rgba(18,28,42,.35);
+      box-shadow:0 0 0 1px #3c5575 inset;
+    }
+    .unit:before,.unit:after{content:"";position:absolute;top:30%;width:10%;height:26%;border:2px solid #7cc4ff;border-radius:4px}
+    .unit:before{left:7%}.unit:after{left:20%}
+    .dot{position:absolute;right:8%;bottom:18%;width:14%;height:18%;border:2px solid #93ffd8;border-radius:4px}
     .hint{position:absolute;bottom:10px;left:10px;font-size:12px;color:#b8c7e2;background:#0d1524cc;border:1px solid #2b3850;border-radius:8px;padding:6px 8px}
     @media (max-width:980px){.main{grid-template-columns:1fr}.left{grid-template-rows:auto auto auto auto}}
   </style>
@@ -51,6 +66,7 @@
         <a href="./line-field-titan-x.html">Field</a>
         <a href="./line-city-pro-max.html">City</a>
         <a href="./line-compare-dual-series.html">Compare</a>
+        <a href="./line-sketchboard-6views.html">Sketches</a>
       </div>
     </div>
     <div class="main">
@@ -79,6 +95,7 @@
       </section>
       <section class="right">
         <canvas id="c"></canvas>
+        <div class="fallback"><div class="unit"><div class="dot"></div></div></div>
         <div class="hint">ЛКМ: вращение · колесо: масштаб · ПКМ: панорама</div>
       </section>
     </div>
