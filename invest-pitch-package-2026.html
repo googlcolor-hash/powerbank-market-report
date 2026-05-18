@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Инвест-пакет 2026: Компактный Power-модуль</title>
+  <style>
+    :root{
+      --bg:#0d1117; --card:#161c27; --line:#2a3344; --ink:#eaf0fa; --muted:#a9b5c9;
+      --a:#63b9ff; --b:#78efc9;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      color:var(--ink);
+      font-family:"Segoe UI","Inter",system-ui,sans-serif;
+      background:
+        radial-gradient(1000px 360px at 0% 0%,#162b49 0%,transparent 55%),
+        radial-gradient(950px 330px at 100% 0%,#163e37 0%,transparent 52%),
+        var(--bg);
+    }
+    .wrap{max-width:1280px;margin:0 auto;padding:24px 20px 56px}
+    .head{display:grid;grid-template-columns:1.1fr .9fr;gap:14px}
+    .panel{background:var(--card);border:1px solid var(--line);border-radius:14px}
+    .hero{padding:16px}
+    h1{margin:0 0 8px;font-size:34px;line-height:1.08}
+    .sub{margin:0;color:var(--muted)}
+    .chips{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap}
+    .chip{padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:#111826;font-size:12px}
+    .meta{padding:14px}
+    .meta-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+    .k{padding:10px;border:1px solid var(--line);border-radius:10px;background:#101726}
+    .k b{display:block;font-size:11px;color:var(--muted);text-transform:uppercase}
+    .k span{font-size:18px;font-weight:700}
+    .sec{margin-top:16px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
+    h2{margin:0 0 10px;font-size:24px}
+    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .timeline{display:grid;grid-template-columns:repeat(4,minmax(130px,1fr));gap:10px}
+    .step{border:1px solid var(--line);border-radius:10px;padding:10px;background:#101726}
+    .step b{display:block}
+    .step p{margin:6px 0 0;color:var(--muted);font-size:13px}
+    .table-wrap{overflow:auto;border:1px solid var(--line);border-radius:12px}
+    table{width:100%;border-collapse:collapse;min-width:980px}
+    th,td{padding:9px 10px;border-bottom:1px solid #253046;font-size:13px;vertical-align:top}
+    th{background:#1a2436;text-align:left;position:sticky;top:0}
+    ul{margin:6px 0 0;padding-left:18px}
+    li{margin:6px 0}
+    .money{display:grid;grid-template-columns:repeat(3,minmax(160px,1fr));gap:10px}
+    .box{border:1px solid var(--line);background:#101726;border-radius:10px;padding:10px}
+    .box b{display:block;color:var(--muted);font-size:12px}
+    .box span{font-size:22px;font-weight:700}
+    .video-wrap{display:grid;grid-template-columns:1fr .9fr;gap:12px}
+    video{width:100%;border-radius:12px;border:1px solid var(--line);background:#000}
+    .note{color:var(--muted);font-size:12px;line-height:1.5}
+    a{color:#98ccff;text-decoration:none}
+    a:hover{text-decoration:underline}
+    @media (max-width:980px){
+      .head,.grid2,.video-wrap{grid-template-columns:1fr}
+      .timeline{grid-template-columns:1fr 1fr}
+      .money{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="head">
+      <article class="panel hero">
+        <h1>Инвестиционный пакет 2026<br>Компактный металлический Power-модуль</h1>
+        <p class="sub">Сформировано на основе NotebookLM-данных и рыночной информации 2026 года (РФ + импортные аналоги).</p>
+        <div class="chips">
+          <span class="chip">2x USB-A OUT</span>
+          <span class="chip">1x USB-IN</span>
+          <span class="chip">Металлический корпус</span>
+          <span class="chip">GaN-компоненты</span>
+          <span class="chip">Инвест-запрос 15 млн ₽</span>
+        </div>
+      </article>
+      <article class="panel meta">
+        <div class="meta-grid">
+          <div class="k"><b>Дата актуальности</b><span>Фев–май 2026</span></div>
+          <div class="k"><b>Рынок РФ</b><span>18.7 млрд ₽</span></div>
+          <div class="k"><b>Рост сегмента</b><span>+47%/год</span></div>
+          <div class="k"><b>BEP</b><span>~1 072 шт/мес</span></div>
+        </div>
+      </article>
+    </section>
+
+    <section class="sec">
+      <h2>1) Структура презентации (12 слайдов)</h2>
+      <div class="timeline">
+        <div class="step"><b>1. Титульный</b><p>Название, фото прототипа, контакты.</p></div>
+        <div class="step"><b>2. Проблема</b><p>Дефицит локальных решений, длинная логистика.</p></div>
+        <div class="step"><b>3. Рынок</b><p>18.7 млрд ₽, рост +47% в среднем сегменте.</p></div>
+        <div class="step"><b>4. Аналоги</b><p>Таблица 8 лидеров рынка.</p></div>
+        <div class="step"><b>5. Решение</b><p>Компактный модуль + rugged-корпус.</p></div>
+        <div class="step"><b>6. Технология</b><p>GaN, трассировка, сборка в РФ (Руднево).</p></div>
+        <div class="step"><b>7. Бизнес-модель</b><p>D2C + B2B, целевая маржа 45–60%.</p></div>
+        <div class="step"><b>8. Юнит-экономика</b><p>LTV/CAC 9.6, окупаемость 2.1 мес.</p></div>
+        <div class="step"><b>9. Экономика проекта</b><p>Точка безубыточности + 3 сценария.</p></div>
+        <div class="step"><b>10. Roadmap</b><p>R&D → оснастка → 1-я партия 1000 шт.</p></div>
+        <div class="step"><b>11. Риски</b><p>Пошлины, чипы, логистика + меры снижения.</p></div>
+        <div class="step"><b>12. Запрос</b><p>15 млн ₽, цель 8 млн ₽/мес выручки.</p></div>
+      </div>
+    </section>
+
+    <section class="sec">
+      <h2>2) Сводная таблица сравнения аналогов</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Модель</th><th>Емкость</th><th>Мощность</th><th>Порты</th><th>Вес</th><th>Цена РФ</th><th>Доставка/страна</th><th>Фото (описание)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Xiaomi PB 3</td><td>20к / 74Wh</td><td>18W</td><td>2×A, 1×C</td><td>434г</td><td>2 490 ₽</td><td>Наличие РФ</td><td>Матовый анод. Al</td></tr>
+            <tr><td>Baseus 65W</td><td>20к / 74Wh</td><td>65W</td><td>2×A, 2×C</td><td>460г</td><td>4 990 ₽</td><td>Наличие РФ</td><td>Цифровой дисплей</td></tr>
+            <tr><td>Anker Slim</td><td>10к / 37Wh</td><td>12W</td><td>2×A, 1×C</td><td>212г</td><td>2 990 ₽</td><td>Наличие РФ</td><td>Ультратонкий 14мм</td></tr>
+            <tr><td>HIPER MP</td><td>20к / 74Wh</td><td>22.5W</td><td>2×A, 1×C*</td><td>380г</td><td>3 490 ₽</td><td>Наличие РФ</td><td>Со встроенными кабелями</td></tr>
+            <tr><td>Samsung P3300</td><td>10к / 37Wh</td><td>25W</td><td>2×C</td><td>188г</td><td>3 990 ₽</td><td>Наличие РФ</td><td>Матовый пластик</td></tr>
+            <tr><td>ZMI QB820</td><td>20к / 74Wh</td><td>45W</td><td>2×A, 1×C</td><td>440г</td><td>~4 900 ₽</td><td>Китай (30 дн.)</td><td>Al корпус, дисплей</td></tr>
+            <tr><td>Romoss Sense</td><td>30к / 111Wh</td><td>22.5W</td><td>2×A, 1×C</td><td>665г</td><td>~3 000 ₽</td><td>Китай (45 дн.)</td><td>Крупный блок</td></tr>
+            <tr><td>Defender Extra</td><td>10к / 37Wh</td><td>10W</td><td>2×A</td><td>240г</td><td>1 500 ₽</td><td>Наличие РФ</td><td>Бюджетный пластик</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">* HIPER: встроенные кабели Lightning/Type-C. Источник цен по брифу: Яндекс Маркет, февраль–май 2026.</p>
+    </section>
+
+    <section class="sec grid2">
+      <article class="panel" style="padding:12px">
+        <h2 style="font-size:20px;margin:0 0 8px">3) Наш продукт vs аналоги</h2>
+        <ul>
+          <li><b>Преимущество:</b> металлический корпус и теплоотвод выше, чем у пластиковых моделей.</li>
+          <li><b>Преимущество:</b> целевая масса &lt;200г при мощности 22.5W+ и универсальных портах.</li>
+          <li><b>Преимущество:</b> локальная сборка — быстрые инженерные итерации (дни, а не недели).</li>
+          <li><b>Слабое место:</b> себестоимость выше на старте из-за мелкосерийности.</li>
+          <li><b>Слабое место:</b> зависимость от импортных контроллеров (нужно закрыть складом).</li>
+        </ul>
+      </article>
+      <article class="panel" style="padding:12px">
+        <h2 style="font-size:20px;margin:0 0 8px">4) Инвестиционная модель (3 сценария)</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Показатель</th><th>Консервативный</th><th>Базовый</th><th>Агрессивный</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Цена</td><td>2 400 ₽</td><td>3 200 ₽</td><td>3 900 ₽</td></tr>
+              <tr><td>Объем/мес</td><td>800 шт.</td><td>2 500 шт.</td><td>5 000 шт.</td></tr>
+              <tr><td>Маржа</td><td>25%</td><td>44%</td><td>53%</td></tr>
+              <tr><td>EBITDA</td><td>-500к ₽/мес</td><td>+3.5 млн ₽/мес</td><td>+12 млн ₽/мес</td></tr>
+              <tr><td>Статус</td><td>Выживание</td><td>Целевой</td><td>Масштабирование</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+    </section>
+
+    <section class="sec">
+      <h2>5) Устный питч + видео презентации</h2>
+      <div class="video-wrap">
+        <div>
+          <video controls preload="metadata">
+            <source src="./assets/media/invest-pitch-power-module.mp4" type="video/mp4" />
+          </video>
+          <p class="note">Видео: <a href="./assets/media/invest-pitch-power-module.mp4">скачать/открыть файл</a></p>
+        </div>
+        <div class="panel" style="padding:12px">
+          <h2 style="font-size:20px;margin:0 0 8px">Краткий pitch (2.5 минуты)</h2>
+          <ul>
+            <li><b>Проблема:</b> импортозависимость и нестабильная логистика.</li>
+            <li><b>Решение:</b> компактный модуль на GaN, прочный корпус, локализация в РФ.</li>
+            <li><b>Экономика:</b> маржа 44% в базовом сценарии, окупаемость привлечения ~2 месяца.</li>
+            <li><b>Запрос:</b> 15 млн ₽ на запуск серии и маркетинг.</li>
+            <li><b>Цель 12 мес:</b> 2 500 шт./мес и выручка ~8 млн ₽/мес.</li>
+          </ul>
+          <p class="note">Нужно подтвердить перед финальной подачей: CustDev B2B-спрос и COGS при российских Li-ion ячейках.</p>
+        </div>
+      </div>
+      <p class="note">Навигация: <a href="./index.html">основной рынок</a> · <a href="./invest-notebooklm-brief-2026.html">NotebookLM brief</a></p>
+    </section>
+  </div>
+</body>
+</html>
