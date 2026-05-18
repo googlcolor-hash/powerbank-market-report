@@ -27,6 +27,10 @@
     .cta{margin-top:8px;padding:10px;border:1px solid var(--line);border-radius:10px;background:#0f1624;color:#cfe0ff;font-size:13px}
     .right{position:relative;overflow:hidden}
     #c{width:100%;height:100%;display:block}
+    .fallback-img{
+      position:absolute;inset:0;margin:auto;max-width:70%;max-height:70%;opacity:.30;filter:grayscale(1) contrast(1.15);
+      pointer-events:none;z-index:2;
+    }
     .fallback{
       position:absolute;inset:14px;border:1px dashed #365071;border-radius:14px;pointer-events:none;
       background:
@@ -79,6 +83,7 @@
       </section>
       <section class="right">
         <canvas id="c"></canvas>
+        <img class="fallback-img" src="./assets/mat_world/Charge100-Carousel-Web2.webp" alt="fallback sketch">
         <div class="fallback"><div class="unit"><div class="port"></div><div class="screen"></div></div></div>
         <div class="hint">ЛКМ: вращение · колесо: масштаб · ПКМ: панорама</div>
       </section>

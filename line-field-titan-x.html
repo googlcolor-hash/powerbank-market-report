@@ -39,6 +39,10 @@
     .btn{border:1px solid var(--line);background:#101927;color:#d5e8ff;border-radius:9px;padding:8px 10px;cursor:pointer}
     .right{position:relative;overflow:hidden}
     #c{width:100%;height:100%;display:block}
+    .fallback-img{
+      position:absolute;inset:0;margin:auto;max-width:72%;max-height:72%;opacity:.28;filter:grayscale(1) contrast(1.2);
+      pointer-events:none;z-index:2;
+    }
     .fallback{
       position:absolute;inset:14px;border:1px dashed #365071;border-radius:14px;pointer-events:none;
       background:
@@ -95,6 +99,7 @@
       </section>
       <section class="right">
         <canvas id="c"></canvas>
+        <img class="fallback-img" src="./assets/mat_world/Charge100-Carousel-Web6.webp" alt="fallback sketch">
         <div class="fallback"><div class="unit"><div class="dot"></div></div></div>
         <div class="hint">ЛКМ: вращение · колесо: масштаб · ПКМ: панорама</div>
       </section>
