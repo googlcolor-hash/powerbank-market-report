@@ -1,0 +1,15 @@
+{
+  "checked_at_utc": "2026-05-18T08:26:14.959780Z",
+  "results": {
+    "main": {
+      "url": "https://googlcolor-hash.github.io/powerbank-market-report/",
+      "status_code": 200,
+      "title_fragment": "<!doctype html>\n<html lang=\"ru\">\n<head>\n  <meta charset=\"utf-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n  <title>Анализ рынка похожих устройств:"
+    },
+    "invest": {
+      "url": "https://googlcolor-hash.github.io/powerbank-market-report/invest-notebooklm-brief-2026.html",
+      "status_code": 200,
+      "title_fragment": "<!doctype html>\n<html lang=\"ru\">\n<head>\n  <meta charset=\"utf-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n  <title>Инвестиционный проект: Компактн"
+    }
+  }
+}
